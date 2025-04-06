@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/estilo.css">
+    <title>Morangos Autopoiéticos</title>
+    <link rel="shortcut icon" href="imagens/Logo.png"/>
+</head>
+
+<body class="body-color">
+    <header>
+        <div class="box headerbox-color row">
+            <div class="w-6 h-full padding-logo">
+                <img class="logo" src="./imagens/Logo.png">
+            </div>
+            <p class="title title-color">Morangos Autopoiéticos</p>
+        </div>
+    </header>
+    <main class="flex row">
+        <div class="h-full w-40 column">
+            <div class="w-full h-33 padding-5box">
+                <div class="box databox-color padding-2box" style="position: relative;">
+                    <p class="subtitle subtitle-color">Umidade</p>
+                    <img class="marcadagua" src="Imagens/Umidade.png">
+                </div>
+            </div>
+            <div class="w-full h-33 padding-5box">
+                <div class="box databox-color padding-2box" style="position: relative;">
+                    <p class="subtitle subtitle-color">Temperatura</p>
+                    <img class="marcadagua" src="Imagens/Temperatura.png">
+                </div>
+            </div>
+            <div class="w-full h-33 padding-3-5box">
+                <div class="box databox-color padding-2box" style="position: relative;">
+                    <p class="subtitle subtitle-color">Luminosidade</p>
+                    <img class="marcadagua" src="Imagens/Luminosidade.png">
+                </div>
+            </div>
+        </div>
+        <div class= "h-full w-35 column">
+            <div class="w-full h-60 padding-5box">
+                <div class="box databox-color padding-2box" style="position: relative;">
+                    <p class="subtitle subtitle-color">Tanque d'água</p>
+                    <img class="marcadagua" src="Imagens/Nivel-Dagua.png">
+                </div>
+            </div>
+            <div class="w-full h-40 row">
+                <div class="w-50 h-full padding-5box">
+                    <div class="box databox-color padding-2box" style="position: relative;">
+                        <p class="subtitle subtitle-color">Histórico</p>
+                        <div class="w-full h-80 padding-10box">
+                            <a href="historico.html" target="_blank" style="text-decoration: none;">
+                                <div class="slider sliderbox-color">
+                                    <span class="slider-text slidertext-color">Histórico<br>Semanal</span>
+                                </div>
+                            </a>
+                                                     
+                        </div>
+                        <img class="marcadagua" src="Imagens/Historico.png">
+                    </div>
+                </div>
+                <div class="w-50 h-full padding-5box">
+                    <div class="box databox-color padding-2box" style="position: relative;">
+                        <p class="subtitle subtitle-color">Suporte</p>
+                        <img class="marcadagua" src="Imagens/Suporte.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-full w-25 column padding-2box">
+            <div class="box databox-color padding-2box" style="position: relative;">
+                <p class="subtitle subtitle-color">Torre de Controle</p>
+                <img class="marcadagua" src="Imagens/Controle.png">
+
+                <div class="w-full h-20 padding-10box">
+                    <p class="text text-color">Bomba de irrigação</p>
+                    <div class="slider sliderbox-color" onclick="ToggleEvent(this)">
+                        <span class="slider-text slidertext-color">Automático</span>
+                    </div>
+                </div>
+                <div class="w-full h-20 padding-10box">
+                    <p class="text text-color">Comporta de ventilação</p>
+                    <div class="slider sliderbox-color" onclick="ToggleEvent(this)">
+                        <span class="slider-text slidertext-color">Automático</span>
+                    </div>
+                </div>
+                <div class="w-full h-20 padding-10box">
+                    <p class="text text-color">Cooler de ventilação</p>
+                    <div class="slider sliderbox-color" onclick="ToggleEvent(this)">
+                        <span class="slider-text slidertext-color">Automático</span>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </main>      
+    <script>
+        function ToggleEvent(element) {
+            element.classList.toggle('active');
+    
+            const textSpan = element.querySelector('.slider-text');
+
+            if (element.classList.contains('active')) {
+                textSpan.textContent = 'Manual';
+            } else {
+                textSpan.textContent = 'Automático';
+            }
+        }
+
+    </script>
+</body>
+</html>
